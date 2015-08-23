@@ -1,4 +1,4 @@
-package com.tchepannou.blog.client.client.v1;
+package com.tchepannou.blog.client.v1;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
