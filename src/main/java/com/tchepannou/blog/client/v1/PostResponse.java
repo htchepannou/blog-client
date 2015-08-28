@@ -21,12 +21,23 @@ public class PostResponse {
     private Date updated;
 
 
+    private List<AttachmentResponse> attachments = new ArrayList<>();
+
+
     //-- Public
     public void addTag(String tag){
         tags.add(tag);
     }
 
+    public void addAttachment(AttachmentResponse attachment){
+        attachments.add(attachment);
+    }
+
     //-- Getter/Setter
+    public List<AttachmentResponse> getAttachments() {
+        return attachments;
+    }
+
     public long getBlogId() {
         return blogId;
     }
@@ -118,4 +129,5 @@ public class PostResponse {
     public void setUserId(long userId) {
         this.userId = userId;
     }
+
 }
