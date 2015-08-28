@@ -3,6 +3,7 @@ package com.tchepannou.blog.client.v1;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
 
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import java.util.Date;
 import java.util.List;
@@ -25,6 +26,9 @@ public class PostRequest {
     private List<String> tags;
 
     private Date published;
+
+    @NotNull(message="userId_empty")
+    private Long userId;
 
     //-- Getter/Setter
     public String getTitle() {
@@ -73,5 +77,13 @@ public class PostRequest {
 
     public void setSlug(String slug) {
         this.slug = slug;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 }
