@@ -13,14 +13,11 @@ public class PostResponse {
     private String title;
     private String slug;
     private String content;
-    private String type;
-    private List<String> tags = new ArrayList<>();
     private String status;
     private Date published;
     private Date created;
     private Date updated;
-
-
+    private List<String> tags = new ArrayList<>();
     private List<AttachmentResponse> attachments = new ArrayList<>();
 
 
@@ -52,14 +49,6 @@ public class PostResponse {
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 
     public String getTitle() {
