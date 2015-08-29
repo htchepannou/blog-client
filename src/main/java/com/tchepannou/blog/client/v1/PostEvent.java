@@ -9,11 +9,12 @@ public class PostEvent implements Serializable{
     private long blogId;
     private String type;
     private String transactionId;
-    private Date date;
+    private Date date = new Date();
 
     //-- Attributes
     public PostEvent(long id, long blogId, String type, String transactionId){
         this.id = id;
+        this.blogId = blogId;
         this.type = type;
         this.transactionId = transactionId;
     }
