@@ -16,12 +16,12 @@ public class SearchRequest {
     private int limit = DEFAULT_LIMIT;
     private int offset;
 
-    public void addBlogId (long blogId){
-        blogIds.add(blogId);
-    }
-
     public Collection<Long> getBlogIds() {
         return blogIds;
+    }
+
+    public void setBlogIds(Collection<Long> blogIds) {
+        this.blogIds = blogIds;
     }
 
     public int getOffset() {
