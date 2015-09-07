@@ -20,6 +20,10 @@ public class SearchRequest {
         return blogIds;
     }
 
+    public void addBlogId (long id){
+        blogIds.add(id);
+    }
+
     public void setBlogIds(Collection<Long> blogIds) {
         this.blogIds = blogIds;
     }
