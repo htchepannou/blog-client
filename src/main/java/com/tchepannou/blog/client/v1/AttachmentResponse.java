@@ -15,6 +15,13 @@ public class AttachmentResponse {
     private Integer height;
 
     //-- Getter/Setter
+    public boolean isVideo (){
+        return contentType != null && contentType.startsWith("video/");
+    }
+    public boolean isImage (){
+        return contentType != null && contentType.startsWith("image/");
+    }
+
     public long getId() {
         return id;
     }

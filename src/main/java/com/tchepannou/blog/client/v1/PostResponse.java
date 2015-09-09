@@ -19,7 +19,7 @@ public class PostResponse {
     private Date updated;
     private List<String> tags = new ArrayList<>();
     private List<AttachmentResponse> attachments = new ArrayList<>();
-
+    private Long mainAttachmentId;
 
     //-- Public
     public void addTag(String tag){
@@ -119,4 +119,11 @@ public class PostResponse {
         this.userId = userId;
     }
 
+    public Long getMainAttachmentId() {
+        return mainAttachmentId;
+    }
+
+    public void setMainAttachmentId(Long mainAttachmentId) {
+        this.mainAttachmentId = mainAttachmentId;
+    }
 }
