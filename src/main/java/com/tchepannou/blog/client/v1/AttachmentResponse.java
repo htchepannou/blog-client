@@ -3,6 +3,7 @@ package com.tchepannou.blog.client.v1;
 public class AttachmentResponse {
     //-- Attributes
     private long id;
+    private String xvideoId;
     private String name;
     private String description;
     private String url;
@@ -110,4 +111,11 @@ public class AttachmentResponse {
         this.height = height;
     }
 
+    public String getXvideoId() {
+        return xvideoId;
+    }
+
+    public void setXvideoId(String xvideoId) {
+        this.xvideoId = xvideoId;
+    }
 }
