@@ -8,6 +8,7 @@ public class AttachmentResponse {
     private String description;
     private String url;
     private String thumbnailUrl;
+    private String embedUrl;
     private Boolean oembed;
     private String contentType;
     private Long contentLength;
@@ -117,5 +118,13 @@ public class AttachmentResponse {
 
     public void setXvideoId(String xvideoId) {
         this.xvideoId = xvideoId;
+    }
+
+    public String getEmbedUrl() {
+        return embedUrl;
+    }
+
+    public void setEmbedUrl(String embedUrl) {
+        this.embedUrl = embedUrl;
     }
 }
