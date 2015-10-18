@@ -1,7 +1,6 @@
 package com.tchepannou.blog.client.v1;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -17,22 +16,27 @@ public class PostResponse {
     private Date published;
     private Date created;
     private Date updated;
-    private List<String> tags = new ArrayList<>();
-    private List<AttachmentResponse> attachments = new ArrayList<>();
-    private Long mainAttachmentId;
+    private List<String> tags;
+    private List<Long> attachmentIds;
 
     //-- Public
     public void addTag(String tag){
+        if (tags == null){
+            tags = new ArrayList<>();
+        }
         tags.add(tag);
     }
 
-    public void addAttachment(AttachmentResponse attachment){
-        attachments.add(attachment);
+    public void addAttachment(long attachmentId){
+        if (attachmentIds == null){
+            attachmentIds = new ArrayList<>();
+        }
+        attachmentIds.add(attachmentId);
     }
 
     //-- Getter/Setter
-    public List<AttachmentResponse> getAttachments() {
-        return attachments;
+    public List<Long> getAttachmentIds() {
+        return attachmentIds;
     }
 
     public long getBlogId() {
@@ -68,7 +72,7 @@ public class PostResponse {
     }
 
     public List<String> getTags() {
-        return Collections.unmodifiableList(tags);
+        return tags;
     }
 
     public String getStatus() {
@@ -117,13 +121,5 @@ public class PostResponse {
 
     public void setUserId(long userId) {
         this.userId = userId;
-    }
-
-    public Long getMainAttachmentId() {
-        return mainAttachmentId;
-    }
-
-    public void setMainAttachmentId(Long mainAttachmentId) {
-        this.mainAttachmentId = mainAttachmentId;
     }
 }
